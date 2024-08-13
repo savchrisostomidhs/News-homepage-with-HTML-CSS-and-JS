@@ -1,0 +1,403 @@
+@font-face {
+    font-family: Inter;
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url(./assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Inter ExtraBold";
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Inter;
+    overflow-x: hidden;
+    padding: 16px;
+}
+
+/* Header */
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    height: 40px;
+    width: 65px;
+}
+
+header .options ul {
+    background-color: white;
+    height: 100%;
+    list-style-type: none;
+    padding: 25px;
+    position: absolute;
+    right: -256px;
+    transition: all 1.5s ease;
+    visibility: hidden;
+    width: 256px;
+}
+
+header .options .open {
+    right: 0;
+    transition: right 1.5s ease;
+    visibility: visible;
+    z-index: 1;
+}
+
+header .options ul li {
+    margin-bottom: 15px;
+}
+
+header .options ul li:first-child {
+    margin-top: 50px;
+}
+
+header .options ul li a {
+    color: black;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+}
+
+header .options .burger img:first-child {
+    cursor: pointer;
+    height: 17px;
+    width: 40px;
+}
+
+header .options .burger img:nth-child(2) {
+    cursor: pointer;
+    display: none;
+    height: 31px;
+    width: 32px;
+}
+
+header .op {
+    background-color: hsla(0, 0%, 0%, 0.4);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1.5s ease;
+    visibility: hidden;
+    width: 100%;
+}
+
+header .op-vis {
+    transition: all 1.5s ease;
+    visibility: visible;
+    width: calc(100% - 256px);
+}
+
+header .options ul li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+/* Main */
+
+/* Article */
+
+main article {
+    margin-top: 32px;
+}
+
+.image img:first-child {
+    display: none;
+}
+
+main article .image img:nth-child(2) {
+    width: 100%;
+}
+
+main article h1 {
+    font-family: "Inter ExtraBold";
+    font-size: 48px;
+    line-height: 46px;
+    margin-top: 25px;
+    width: 80%;
+}
+
+main article .det {
+    margin-top: 20px;
+}
+
+main article .det>p {
+    font-size: 19px;
+    line-height: 28px;
+}
+
+main article .det>button {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    cursor: pointer;
+    font-family: "Inter Bold";
+    font-size: 16px;
+    height: 48px;
+    letter-spacing: 5px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    width: 185px;
+}
+
+main article .det>button:hover {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+}
+
+/* Section */
+
+main section {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 486px;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 20px;
+    width: 100%;
+}
+
+main section h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 30px;
+}
+
+main section .sec {
+    padding: 25px 0;
+}
+
+main section .sec h3 {
+    cursor: pointer;
+    font-family: "Inter Bold";
+    font-size: 22px;
+}
+
+main section .sec p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 19px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+main section .cars,
+main section .ai {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.6);
+}
+
+main section .sec h3:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+/* Articles */
+
+main .articles {
+    margin-top: 54px;
+}
+
+main .articles .art {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+main .articles .art .img img {
+    height: 130px;
+    width: 100px;
+}
+
+main .articles .art .con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .articles .art .con>p:first-child {
+    color: hsl(5, 85%, 63%);
+    font-family: "Inter Bold";
+    font-size: 32px;
+}
+
+main .articles .art .con>h4 {
+    cursor: pointer;
+    font-family: "Inter ExtraBold";
+    font-size: 22px;
+}
+
+main .articles .art .con>p:nth-child(3) {
+    color: hsl(236, 13%, 42%);
+    font-size: 20px;
+    line-height: 28px;
+}
+
+main .articles .art .con h4:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .container {
+        height: 810px;
+        width: 1110px;
+    }
+
+    /* Header */
+
+    header img {
+        height: 40px;
+        width: 65px;
+    }
+
+    header .options ul {
+        background: none;
+        display: flex;
+        gap: 40px;
+        padding: 0;
+        position: static;
+        visibility: visible;
+        width: 100%;
+    }
+
+    header .options ul li {
+        margin-bottom: 0;
+    }
+
+    header .options ul li:first-child {
+        margin-top: 0;
+    }
+
+    header .options .burger img {
+        display: none;
+    }
+
+    header .options ul li a:hover {
+        color: hsl(5, 85%, 63%);
+    }
+
+    /* Main */
+
+    main .first-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 55px;
+    }
+
+    /* Article */
+
+    main article {
+        margin-top: 0;
+        width: 730px;
+    }
+
+    .image img:first-child {
+        display: inline;
+        width: 100%;
+    }
+
+    main article .image img:nth-child(2) {
+        display: none;
+    }
+
+    main article .info {
+        display: flex;
+        margin-top: 35px;
+    }
+
+    main article h1 {
+        font-family: "Inter ExtraBold";
+        font-size: 56px;
+        line-height: 56px;
+        margin-top: 0;
+        width: 365px;
+    }
+
+    main article .det {
+        margin-top: 0;
+        width: 365px;
+    }
+
+    main article .det>p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* Section */
+
+    main section {
+        height: 522px;
+        margin-top: 0;
+        width: 350px;
+    }
+
+    main section .sec p {
+        color: hsla(0, 0%, 100%, 0.6);
+        font-size: 16px;
+    }
+
+    /* Articles */
+
+    main .articles {
+        align-items: center;
+        display: flex;
+        margin-top: 70px;
+    }
+
+    main .articles .art {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 0;
+    }
+
+    main .articles .art .con>h4 {
+        font-size: 18px;
+    }
+
+    main .articles .art .con>p:nth-child(3) {
+        color: hsl(236, 13%, 42%);
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (max-height: 800px) {
+    .container {
+        height: 90%;
+        width: 90%;
+    }
+}
